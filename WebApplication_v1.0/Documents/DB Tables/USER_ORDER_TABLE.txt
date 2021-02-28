@@ -1,0 +1,7 @@
+                                                                     ${NAME}_${MOBILE}
+
+     Name     |      Email Address       |     Mobile Number     |       ORDER   |      Home Address    |   ORDER TIME
+
+
+CREATE TABLE    ${NAME}_${MOBILE} (MOBILE_NUMBER INT REFERENCES USER_SIGNUP(MOBILE_NUMBER), NAME VARCHAR(100) NOT NULL ,EMAIL_ADDRESS VARCHAR(100) NOT NULL
+                                                                             ,HOME ADDRESS VARCHAR(1000) NOT NULL,ORDER_TIME DATETIME);

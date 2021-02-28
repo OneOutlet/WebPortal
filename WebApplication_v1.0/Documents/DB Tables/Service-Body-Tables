@@ -1,0 +1,80 @@
+                                               Service_All
+                Service_Name           |           Customer_Name     |       Time
+            
+Query =  Create table Service_All(Request_Number varchar(50) primary key,Service_Name varchar(50) not null,Customer_Name varchar(100) not null,Time varchar(100) not null,Status int not null);      
+
+===========================================================================================================================================
+
+                                             Service_Electrician
+          Customer_Name     |    Mobile      |        Email         |          Address           |    Time
+            
+Query =  Create table Service_Electrician(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,Address varchar(10000) not null,Time  DATETIME not null, Status int not null);      
+
+===========================================================================================================================================
+
+                                         Service_Plumber
+          Customer_Name     |    Mobile      |        Email         |          Address           |    Time
+            
+	Query =  Create table Service_Plumber(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,Address varchar(10000) not null,Time  DATETIME not null, Status int not null);      
+
+
+
+===========================================================================================================================================================================================================
+
+                                         Service_Carpenter
+          Customer_Name     |    Mobile      |        Email         |          Address           |    Time
+            
+Query =  Create table Service_Carpanter(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,Address varchar(10000) not null,Time  DATETIME not null, Status int not null);      
+
+
+
+
+===========================================================================================================================================================================================================
+
+                                         Service_Painter
+          Customer_Name     |    Mobile      |        Email         |          Address           |    Time
+            
+Query =  Create table Service_Painter(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,Address varchar(10000) not null,Time  DATETIME not null, Status int not null);      
+
+
+
+===========================================================================================================================================================================================================
+
+                                         Service_Ironwork
+          Customer_Name     |    Mobile      |        Email         |          Address           |    Time
+            
+Query =  Create table Service_Ironwork(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,Address varchar(10000) not null,Time  DATETIME not null, Status int not null);      
+
+
+
+===========================================================================================================================================================================================================
+
+
+                                      Service_Event
+          Customer_Name     |    Mobile      |        Email         |           Event            |        Address           |    Time
+            
+Query =  Create table Service_Event(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,event varchar(100) not null,Address varchar(10000) not null,Time DATETIME not null,Status int not null);      
+
+
+
+===========================================================================================================================================================================================================
+
+                                           Service_Tuition
+          Customer_Name     |    Mobile      |        Email         |           Event            |        Address           |    Time
+            
+Query =  Create table Service_Tuition(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,cls varchar(100) not null,Address varchar(10000) not null,Time DATETIME not null,Status int not null);      
+
+
+
+===========================================================================================================================================================================================================
+
+
+
+                                      Contact_US
+          Customer_Name     |    Mobile      |        Email         |        Issue           |    Time
+            
+Query =  Create table Contact_US(Request_Number varchar(50) primary key,Customer_Name varchar(100) not null,mobile varchar(11) not null,email varchar(100) not null,Issue varchar(10000) not null,Time DATETIME not null,Status int not null);      
+
+
+
+===========================================================================================================================================================================================================

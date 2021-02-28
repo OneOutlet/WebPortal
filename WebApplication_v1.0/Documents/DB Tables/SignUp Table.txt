@@ -1,0 +1,11 @@
+                                                         User_SignUp
+
+          Mobile_Number    |   Name     |      Email Address       |     Password     |       Gender  | aCTIVE
+
+
+ Query:= CREATE TABLE USER_SIGNUP(MOBILE_NUMBER INT PRIMARY KEY,NAME VARCHAR(100) NOT NULL,
+                            EMAIL_ADDRESS VARCHAR(100) NOT NULL,PASSWORD VARCHAR(50) NOT NULL,
+                            GENDER VARCHAR(2) NOT NULL,ACTIVE INT NOT NULL);
+
+
+
