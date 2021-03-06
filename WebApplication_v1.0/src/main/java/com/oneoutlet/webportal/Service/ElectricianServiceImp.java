@@ -31,13 +31,21 @@ public class ElectricianServiceImp implements ElectricianService {
 	
 		int count=0;
 		
-		String emailFormat=null;
+		String customerEmailFormat=null;
+		
+		String adminEmailFormat=null;
 		
 		String requestNumber=null;
 		
 		requestNumber=reqId.generateReqNum("Service_Electrician", "ReqElec");
 		
-		emailFormat=createEmail.generateEmail(dto.getCustomer_Name(),requestNumber);
+		customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
+		
+		adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Electrician", requestNumber,
+				dto.getMobile(), LocalDateTime.now(), dto.getAddress());
+		
+		adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Electrician", requestNumber,
+				dto.getMobile(), LocalDateTime.now(), dto.getAddress());
 			
 		ServiceElectricianBO bo= new ServiceElectricianBO();
 		//Inserting Data into BO Object
@@ -53,8 +61,12 @@ public class ElectricianServiceImp implements ElectricianService {
         
         count=electricanDAO.insertElectricianData(bo);
         
-        if(count==1)
-             email.sendMail(dto.getEmail(), "OneOutlet Electrician Service Confirmation", emailFormat);
+        if (count == 1) {
+			email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
+					customerEmailFormat);
+			email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com" },
+					"OneOutlet Service Notification", adminEmailFormat);
+		}
 		
 		return count;
 	}

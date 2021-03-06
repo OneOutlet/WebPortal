@@ -30,13 +30,18 @@ public class ContactUsServiceImp implements ContactUsService {
 		
 		int count=0;
 		
-		String emailFormat=null;
+		String customerEmailFormat=null;
+		
+		String adminEmailFormat=null;
 		
 		String requestNumber=null;
 		
 		requestNumber=reqId.generateReqNum("Contact_US", "ReqContact");
 		
-		emailFormat=createEmail.generateEmail(dto.getCustomer_Name(),requestNumber);
+		customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
+		
+		adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Contact Us", requestNumber,
+				dto.getMobile(), LocalDateTime.now(), "NO Address Available");
 		
 		ContactUsBO bo=null;
 		
@@ -52,8 +57,12 @@ public class ContactUsServiceImp implements ContactUsService {
 		
 		count=contactUsDAO.insertContactUsData(bo);
 		
-		if(count==1) 
-		       email.sendMail(dto.getEmail(), "OneOutlet Service ", emailFormat);
+		if (count == 1) {
+			email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
+					customerEmailFormat);
+			email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com" },
+					"OneOutlet Service Notification", adminEmailFormat);
+		}
 		
 		return count;
 	}

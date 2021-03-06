@@ -8,6 +8,8 @@ function carpenterValid(){
     
     var add = document.forms["carpenterFrm"]["Address"].value;
     
+    var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
     if(name==""){
          document.getElementById("carpenterName").innerHTML="Please Enter Your Name";
        return false;
@@ -30,6 +32,11 @@ function carpenterValid(){
          document.getElementById("carpenterEmail").innerHTML="Please Enter Your Email";
        return false;
     }
+      else if(!mailformat.test(email)){
+         
+         document.getElementById("carpenterEmail").innerHTML="Please Enter Valid Email";
+       return false;
+      }
     
      if(add==""){
          document.getElementById("carpenterAddress").innerHTML="Please Enter Your Address";

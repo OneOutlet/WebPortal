@@ -12,8 +12,8 @@
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-			</div>
-			<form:form action="contactus"
+			</div><!-- contactus -->
+			<form:form action="#"
 				modelAttribute="contactUs" name="contactFrm" onsubmit="return contactValid()" class="needs-validation">
 				<div class="modal-body mx-3">
 					<div class="md-form mb-5">

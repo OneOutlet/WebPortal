@@ -1,12 +1,14 @@
 function contactValid(){
 
-    var name = document.forms["carpenterFrm"]["Customer_Name"].value;
+    var name = document.forms["contactFrm"]["Customer_Name"].value;
     
-    var mobile = document.forms["carpenterFrm"]["mobile"].value;
+    var mobile = document.forms["contactFrm"]["mobile"].value;
     
-    var email = document.forms["carpenterFrm"]["email"].value;
+    var email = document.forms["contactFrm"]["email"].value;
     
-    var issue = document.forms["carpenterFrm"]["issue"].value;
+    var issue = document.forms["contactFrm"]["issue"].value;
+    
+    var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
     if(name==""){
          document.getElementById("contactName").innerHTML="Please Enter Your Name";
@@ -30,7 +32,11 @@ function contactValid(){
          document.getElementById("contactEmail").innerHTML="Please Enter Your Email";
        return false;
     }
-    
+      else if(!mailformat.test(email)){
+         
+         document.getElementById("tuitionEmail").innerHTML="Please Enter Valid Email";
+       return false;
+      }
      if(issue==""){
          document.getElementById("contactIssue").innerHTML="Please Enter Your Problem";
        return false;

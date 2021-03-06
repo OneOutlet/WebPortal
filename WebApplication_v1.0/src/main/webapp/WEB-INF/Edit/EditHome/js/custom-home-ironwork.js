@@ -8,6 +8,8 @@ function ironworkValid(){
     
     var add = document.forms["ironworkFrm"]["Address"].value;
     
+    var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
     if(name==""){
          document.getElementById("ironworkName").innerHTML="Please Enter Your Name";
        return false;
@@ -30,6 +32,11 @@ function ironworkValid(){
          document.getElementById("ironworkEmail").innerHTML="Please Enter Your Email";
        return false;
     }
+     else if(!mailformat.test(email)){
+         
+         document.getElementById("ironworkEmail").innerHTML="Please Enter Valid Email";
+       return false;
+      }
     
      if(add==""){
          document.getElementById("ironworkAddress").innerHTML="Please Enter Your Address";

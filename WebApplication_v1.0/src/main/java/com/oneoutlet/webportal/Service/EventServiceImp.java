@@ -29,13 +29,18 @@ public class EventServiceImp implements EventService {
 		
 			int count=0;
 			
-			String emailFormat=null;
+			String customerEmailFormat=null;
+			
+			String adminEmailFormat=null;
 			
             String requestNumber=null;
 			
 			requestNumber=reqId.generateReqNum("Service_Event", "ReqEvent");
 			
-			emailFormat=createEmail.generateEmail(dto.getCustomer_Name(),requestNumber);
+			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
+			
+			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Event", requestNumber,
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress());
 			
 			ServiceEventBO bo= new ServiceEventBO();
 			
@@ -53,8 +58,12 @@ public class EventServiceImp implements EventService {
 	        count=serviceEventDAO.insertEventData(bo);
 	        
 	        
-	        if(count==1)
-	           email.sendMail(dto.getEmail(), "OneOutlet Event Service Confirmation", emailFormat);
+	        if (count == 1) {
+				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
+						customerEmailFormat);
+				email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com" },
+						"OneOutlet Service Notification", adminEmailFormat);
+			}
 			
 			return count;
 	}

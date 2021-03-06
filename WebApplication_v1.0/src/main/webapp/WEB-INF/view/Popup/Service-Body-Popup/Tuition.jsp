@@ -12,8 +12,8 @@
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-			</div>
-			<form:form action="regitertuitionservice"
+			</div><!-- regitertuitionservice -->
+			<form:form action="#"
 				modelAttribute="serviceTuition" name="tuitionFrm" onsubmit="return tuitionValid()" class="needs-validation">
 				<div class="modal-body mx-3">
 					<div class="md-form mb-5">

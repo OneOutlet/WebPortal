@@ -13,7 +13,7 @@ public class EmailServiceImp implements EmailService {
 	@Autowired
 	private JavaMailSender getJavaMailSender;
 	
-	public void sendMail(String to,String subject,String text) {
+	public void sendMail(String[] to,String subject,String text) {
 		
 		/*
 		 * SimpleMailMessage mailMessage=new SimpleMailMessage();

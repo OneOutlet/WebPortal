@@ -12,8 +12,8 @@
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-			</div>
-			<form:form action="regiterpainterservice"
+			</div><!-- regiterpainterservice -->
+			<form:form action="#"
 				modelAttribute="servicePainter" name="painterFrm" onsubmit="return painterValid()" class="needs-validation">
 				<div class="modal-body mx-3">
 					<div class="md-form mb-5">

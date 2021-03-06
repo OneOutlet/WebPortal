@@ -31,13 +31,18 @@ public class PainterServiceImp implements PainterService {
 		
 			int count=0;
 			
-			String emailFormat=null;
+			String customerEmailFormat=null;
+			
+			String adminEmailFormat=null;
 			
 			String requestNumber=null;
 			
 			requestNumber=reqId.generateReqNum("Service_Painter", "ReqPaint");
 			
-			emailFormat=createEmail.generateEmail(dto.getCustomer_Name(),requestNumber);
+			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
+			
+			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Painter", requestNumber,
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress());
 			
 			ServicePainterBO bo= new ServicePainterBO();
 
@@ -53,8 +58,12 @@ public class PainterServiceImp implements PainterService {
 	        
 	        count=servicePainterDAO.insertPainterData(bo);
 	        
-	        if(count==1)
-	        	email.sendMail(dto.getEmail(), "OneOutlet Painter Service Confirmation", emailFormat);
+	        if (count == 1) {
+				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
+						customerEmailFormat);
+				email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com" },
+						"OneOutlet Service Notification", adminEmailFormat);
+			}
 			
 			return count;
 	}

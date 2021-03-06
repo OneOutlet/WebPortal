@@ -10,6 +10,8 @@ function eventValid(){
     
     var add = document.forms["eventFrm"]["Address"].value;
     
+    var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
     if(name==""){
          document.getElementById("eventName").innerHTML="Please Enter Your Name";
        return false;
@@ -32,6 +34,11 @@ function eventValid(){
          document.getElementById("eventEmail").innerHTML="Please Enter Your Email";
        return false;
     }
+     else if(!mailformat.test(email)){
+         
+         document.getElementById("eventEmail").innerHTML="Please Enter Valid Email";
+       return false;
+      }
     
      if(event==""){
          document.getElementById("eventEvent").innerHTML="Please Enter Your Event Name";

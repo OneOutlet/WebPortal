@@ -29,13 +29,18 @@ public class IronWorkServiceImp implements IronWorkService {
 		
 			int count=0;
 			
-			String emailFormat=null;
+			String customerEmailFormat=null;
+			
+			String adminEmailFormat=null;
 			
 	        String requestNumber=null;
 			
 			requestNumber=reqId.generateReqNum("Service_Ironwork", "ReqIRWork");
 			
-			emailFormat=createEmail.generateEmail(dto.getCustomer_Name(),requestNumber);
+			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
+			
+			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "IronWork", requestNumber,
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress());
 			
 			ServiceIronWorkBO bo= new ServiceIronWorkBO();
 
@@ -52,8 +57,12 @@ public class IronWorkServiceImp implements IronWorkService {
 	        count=serviceIronWorkDAO.insertIronWorkData(bo);
 	        
 	        
-	        if(count==1)
-	        	email.sendMail(dto.getEmail(), "OneOutlet IronWork Service Confirmation", emailFormat);
+	        if (count == 1) {
+				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
+						customerEmailFormat);
+				email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com" },
+						"OneOutlet Service Notification", adminEmailFormat);
+			}
 			
 			return count;
 	}
