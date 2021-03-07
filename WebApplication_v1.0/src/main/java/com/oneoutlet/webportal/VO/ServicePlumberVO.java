@@ -11,6 +11,7 @@ public class ServicePlumberVO {
 	private int mobile;
 	private String email; 
 	private String Address;
+	private String couponCode;
 
 
 }

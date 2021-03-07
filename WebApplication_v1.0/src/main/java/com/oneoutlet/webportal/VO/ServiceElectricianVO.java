@@ -11,5 +11,6 @@ public class ServiceElectricianVO {
 	private int mobile;
 	private String email; 
 	private String Address;
+	private String couponCode;
 
 }

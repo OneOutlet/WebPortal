@@ -78,3 +78,9 @@ Query =  Create table Contact_US(Request_Number varchar(50) primary key,Customer
 
 
 ===========================================================================================================================================================================================================
+
+
+                          Coupon_Detail
+             Coupon_Code       |       Status  
+
+Query =  Create table Coupon_Detail(Coupon_code varchar(50) primary key, Status int not null);                                  

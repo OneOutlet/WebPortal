@@ -12,5 +12,6 @@ public class ServiceEventVO {
 	private String email; 
 	private String event;
 	private String Address;
+	private String couponCode;
 
 }

@@ -3,6 +3,8 @@ package com.oneoutlet.webportal.DTO;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.oneoutlet.webportal.annotation.CouponCodeAvailbilityValidator;
+import com.oneoutlet.webportal.annotation.CouponCodeValidator;
 import com.oneoutlet.webportal.annotation.IntegerTypeCheck;
 
 import lombok.Data;
@@ -19,5 +21,8 @@ public class ServiceElectricianDTO {
 	private String email;
 	@NotBlank(message = "Please Fill the Your Complete Address")
 	private String Address;
+	@CouponCodeValidator(message ="Sorry Coupon Code is already used")
+	@CouponCodeAvailbilityValidator(message = "Please Enter Valid Coupon Code")
+	private String couponCode;
 
 }

@@ -2,7 +2,6 @@ package com.oneoutlet.common;
 
 import java.time.LocalDateTime;
 
-import org.springframework.stereotype.Service;
 
 public interface CreateEmail {
 

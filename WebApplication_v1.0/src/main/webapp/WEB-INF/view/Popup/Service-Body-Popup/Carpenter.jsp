@@ -57,6 +57,16 @@
 					 <p data-error="wrong" data-success="right" class="invalid-feedback" id="carpenterAddress"></p>			
 						<form:errors class="invalid-feedback" path="Address" />
 					</div>
+					
+					<div class="md-form mb-5">
+
+						<i class="fas fas fa-divide prefix grey-text"></i>
+						<form:input type="text" path="couponCode" id="orangeForm-name"
+							class="form-control is-invalid  validate"/>
+						<label data-error="wrong" data-success="right"
+							for="orangeForm-name">Coupon Code</label>		
+						<form:errors class="invalid-feedback" path="couponCode" />
+					</div>
 
 				</div>
 				<div class="modal-footer d-flex justify-content-center">

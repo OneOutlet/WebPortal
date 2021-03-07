@@ -40,6 +40,7 @@ public class OneoutletCfg implements WebMvcConfigurer {
 	 
 	  }
 
+	 
 	@Bean public InternalResourceViewResolver viewResolver() {
 
 		InternalResourceViewResolver viewRes = new InternalResourceViewResolver();

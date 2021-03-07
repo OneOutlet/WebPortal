@@ -12,5 +12,6 @@ public class ServiceTuitionVO {
 	private String email; 
 	private String cls;
 	private String Address;
+	private String couponCode;
 
 }

@@ -12,8 +12,8 @@
 					aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-			</div><!-- regitertuitionservice -->
-			<form:form action="#"
+			</div><!--  -->
+			<form:form action="regitertuitionservice"
 				modelAttribute="serviceTuition" name="tuitionFrm" onsubmit="return tuitionValid()" class="needs-validation">
 				<div class="modal-body mx-3">
 					<div class="md-form mb-5">
@@ -66,6 +66,16 @@
 							for="orangeForm-name">Your Address</label>
                        <p data-error="wrong" data-success="right" class="invalid-feedback" id="tuitionAddress"></p>			
 						<form:errors class="invalid-feedback" path="Address" />
+					</div>
+					
+					<div class="md-form mb-5">
+
+						<i class="fas fas fa-divide prefix grey-text"></i>
+						<form:input type="text" path="couponCode" id="orangeForm-name"
+							class="form-control is-invalid  validate"/>
+						<label data-error="wrong" data-success="right"
+							for="orangeForm-name">Coupon Code</label>		
+						<form:errors class="invalid-feedback" path="couponCode" />
 					</div>
 
 				</div>
