@@ -27,5 +27,6 @@ public class ServiceEventDTO {
 	@CouponCodeValidator(message ="Sorry Coupon Code is already used")
 	@CouponCodeAvailbilityValidator(message = "Please Enter Valid Coupon Code")
 	private String couponCode;
+	private String landmark;
 
 }

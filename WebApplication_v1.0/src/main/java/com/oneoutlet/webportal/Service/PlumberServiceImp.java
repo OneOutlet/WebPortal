@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.oneoutlet.common.CreateEmail;
 import com.oneoutlet.webportal.BO.ServicePlumberBO;
+import com.oneoutlet.webportal.DAO.CouponCodeDAO;
 import com.oneoutlet.webportal.DAO.ServicePlumberDAO;
 import com.oneoutlet.webportal.DTO.ServicePlumberDTO;
 
@@ -25,6 +26,9 @@ public class PlumberServiceImp implements PlumberService {
 	@Autowired
 	private CreateEmail createEmail;
 	
+	@Autowired
+	private CouponCodeDAO couponCodeDAO;
+	
 	@Override
 	public int insertDataOfPlumber(ServicePlumberDTO dto) {
 			
@@ -36,12 +40,20 @@ public class PlumberServiceImp implements PlumberService {
 			
 			String requestNumber=null;
 			
+            String codeApply="no";      
+			
+			if(!dto.getCouponCode().equals("")) {
+				codeApply="Yes";
+			}
+            
+			
 			requestNumber=reqId.generateReqNum("Service_Plumber", "ReqPlum");
+			
 			
 			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 			
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Plumber", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress());
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
 			
 			ServicePlumberBO bo= new ServicePlumberBO();
 
@@ -50,12 +62,14 @@ public class PlumberServiceImp implements PlumberService {
 			bo.setCustomer_Name(dto.getCustomer_Name());
 			bo.setMobile(dto.getMobile());
 			bo.setEmail(dto.getEmail());
-	        bo.setAddress(dto.getAddress());
+	        bo.setAddress(dto.getAddress().concat(" "+dto.getLandmark()));
 	        bo.setTime(LocalDateTime.now());
 	        bo.setRequest_Number(requestNumber);
 	        bo.setStatus(0);
 	        
 	        count=servicePlumberDAO.insertPlumberData(bo);
+	        
+	        couponCodeDAO.insertCouponCodeData(requestNumber.toLowerCase(), 0);
 	        
 	        if (count == 1) {
 				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",

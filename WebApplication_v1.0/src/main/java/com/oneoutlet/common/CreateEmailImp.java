@@ -32,7 +32,7 @@ public class CreateEmailImp implements CreateEmail {
 
 	@Override
 	public String generateAdminEmail(String requesterName, String requestName, String reqNum, String mobileNum,
-			LocalDateTime time, String address) {
+			LocalDateTime time, String address,String couponCode) {
 		String email = null;
 
 		email = "<link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\" rel=\"stylesheet\" />"
@@ -47,6 +47,7 @@ public class CreateEmailImp implements CreateEmail {
 				+ "<tr><th scope=\"row\">Mobile Number</th><td>" + mobileNum + "</td></tr>"
 				+ "<tr><th scope=\"row\">Time</th><td>" + time + "</td></tr>" + "<tr><th scope=\"row\">Address</th><td>"
 				+ address + "</td></tr>" + "</tbody></table></div></div>"
+				+ "<tr><th scope=\"row\">Coupon Code Applied</th><td>" + couponCode + "</td></tr>" 
 				+ " <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js\" ></script>";
 
 		return email;

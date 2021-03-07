@@ -33,7 +33,7 @@ public class CarpenterServiceImp implements CarpenterService {
 
 		try {
 			
-			int count = 0;
+			int count = 0; 
 
 			String customerEmailFormat = null;
 
@@ -42,11 +42,17 @@ public class CarpenterServiceImp implements CarpenterService {
 			String requestNumber = null;
 
 			requestNumber = reqId.generateReqNum("Service_Carpanter", "ReqCarp");
-
+			
+			String codeApply="no";      
+			
+			if(!dto.getCouponCode().equals("")) {
+				codeApply="Yes";
+			}
+            
 			customerEmailFormat = createEmail.generateCustomerEmail(dto.getCustomer_Name(), requestNumber);
 
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Carpenter", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress());
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
 
 			ServiceCarpenterBO bo = new ServiceCarpenterBO();
 
@@ -55,7 +61,7 @@ public class CarpenterServiceImp implements CarpenterService {
 			bo.setCustomer_Name(dto.getCustomer_Name());
 			bo.setMobile(dto.getMobile());
 			bo.setEmail(dto.getEmail());
-			bo.setAddress(dto.getAddress());
+			bo.setAddress(dto.getAddress().concat(" "+dto.getLandmark()));
 			bo.setTime(LocalDateTime.now());
 			bo.setRequest_Number(requestNumber);
 			bo.setStatus(0);

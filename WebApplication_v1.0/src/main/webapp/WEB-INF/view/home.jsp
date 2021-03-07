@@ -18,11 +18,11 @@
 	content="OneOutlet.com, We are providing Service for Electricain,Carpenter,Plumber,Painter,Event Management,IronWork in Gonda.
                                   We Will Provide home service less than in hour in Gonda City. ">
 <meta
-	name="OneOutlet,Gonda,Electrician,Carpenter,Plumber,Painter,Event Management,IronWork,Service in gonda,Gonda service "
+	name="OneOutlet,home tuition,Gonda,Electrician,Carpenter,Plumber,Painter,Event Management,IronWork,Service in gonda,Gonda service "
 	content="keywords,here">
 <link rel="shortcut icon" href="favicon.ico"
 	type="image/vnd.microsoft.icon">
-<title>OneOutlet Book Electrician,Carpenter and Home Tuition in
+<title>OneOutlet.online Gonda,Book Electrician,Carpenter and Home Tuition in
 	Gonda</title>
 <!-- Font Awesome -->
 <link rel="stylesheet"

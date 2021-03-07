@@ -41,7 +41,7 @@ public class ContactUsServiceImp implements ContactUsService {
 		customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 		
 		adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Contact Us", requestNumber,
-				dto.getMobile(), LocalDateTime.now(), "NO Address Available");
+				dto.getMobile(), LocalDateTime.now(), "NO Address Available","No");
 		
 		ContactUsBO bo=null;
 		

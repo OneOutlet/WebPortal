@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.oneoutlet.common.CreateEmail;
 import com.oneoutlet.webportal.BO.ServiceTuitionBO;
+import com.oneoutlet.webportal.DAO.CouponCodeDAO;
 import com.oneoutlet.webportal.DAO.ServiceTuitionDAO;
 import com.oneoutlet.webportal.DTO.ServiceTuitionDTO;
 
@@ -23,6 +24,9 @@ public class TuitionServiceImp implements TuitionService {
 	@Autowired
 	private CreateEmail createEmail;
 	
+	@Autowired
+	private CouponCodeDAO couponCodeDAO;
+	
 	@Override
 	public int insertDataOfTuition(ServiceTuitionDTO dto) {
 		
@@ -33,13 +37,20 @@ public class TuitionServiceImp implements TuitionService {
 			String adminEmailFormat=null;
 			
             String requestNumber=null;
+            
+            String codeApply="no";      
+			
+			if(!dto.getCouponCode().equals("")) {
+				codeApply="Yes";
+			}
+            
 			
 			requestNumber=reqId.generateReqNum("Service_Tuition", "ReqTuit");
 			
 			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 			
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Tuition", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress());
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
 			
 			ServiceTuitionBO bo= new ServiceTuitionBO();
 			
@@ -49,12 +60,14 @@ public class TuitionServiceImp implements TuitionService {
 			bo.setMobile(dto.getMobile());
 			bo.setEmail(dto.getEmail());
 			bo.setCls(dto.getCls());
-	        bo.setAddress(dto.getAddress());
+	        bo.setAddress(dto.getAddress().concat(" "+dto.getLandmark()));
 	        bo.setTime(LocalDateTime.now());
 	        bo.setRequest_Number(requestNumber);
 	        bo.setStatus(0);
 	        
 	        count=serviceTuitionDAO.insertTuitionData(bo);
+	        
+	        couponCodeDAO.insertCouponCodeData(requestNumber.toLowerCase(), 0);
 	        
 	        
 	        if (count == 1) {

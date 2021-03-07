@@ -24,9 +24,9 @@ public class ServiceCarpenterDTO {
 	@NotBlank(message = "Please Fill the Your Complete Address")
 	private String Address;
 	
-	
 	@CouponCodeValidator(message ="Sorry Coupon Code is already used")
 	@CouponCodeAvailbilityValidator(message = "Please Enter Valid Coupon Code")
 	private String couponCode;
+	private String landmark;
 
 }

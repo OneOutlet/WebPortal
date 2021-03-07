@@ -40,7 +40,6 @@ public class OneoutletCfg implements WebMvcConfigurer {
 	 
 	  }
 
-	 
 	@Bean public InternalResourceViewResolver viewResolver() {
 
 		InternalResourceViewResolver viewRes = new InternalResourceViewResolver();
@@ -92,7 +91,6 @@ public class OneoutletCfg implements WebMvcConfigurer {
 	public JavaMailSender getJavaMailSender() {
 
 		JavaMailSenderImpl javaMailSenderImpl = new JavaMailSenderImpl();
-
 		javaMailSenderImpl.setHost(evn.getProperty("mail.smtp.host"));
 		javaMailSenderImpl.setUsername(evn.getProperty("mail.smtp.userId"));
 		javaMailSenderImpl.setPassword(evn.getProperty("mail.smtp.password"));
