@@ -18,7 +18,7 @@
 				get to grips with Daily Conundrums. We have come up with a
 				simplified way to book electricians carpenters e.t.c . You just have
 				to click on the book now icon available under the specified column
-				on the website <b>OneOutlet.online</b> . Vila! You have resolved
+				on the website <b>OneOutlet.online</b> . Voila! You have resolved
 				your issue by giving us the responsibility just by providing us your
 				contact number and address.
 			</p>
@@ -46,7 +46,7 @@
 					<!-- First Column  -->
 
 
-					<div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xl-3">
 						<div class="card mb-4 xs-3">
 							<img src="<spring:url value="/Edit/EditAboutUs/Harsh.jpg"/>"
 								class="card-img-top" alt="HarsH's Picture" />
@@ -59,8 +59,8 @@
 
 					<!-- Second Column  -->
 
-					<div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-						<div class="card mb-4 xs-3" >
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xl-3">
+						<div class="card mb-4 xs-3">
 							<img src="<spring:url value="/Edit/EditAboutUs/ami.jpg"/>"
 								class="card-img-top" alt="Arvind's Picture" />
 							<div class="card-body">
@@ -73,13 +73,28 @@
 
 					<!-- Third Column  -->
 
-					<div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-						<div class="card mb-4 xs-3" >
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xl-3">
+						<div class="card mb-4 xs-3">
 							<img src="<spring:url value="/Edit/EditAboutUs/Vijay.jpg"/>"
 								class="card-img-top" alt="Vijay's Picture" />
 							<div class="card-body">
 								<h6 class="card-title">Vijay Pandey</h6>
-								<p class="card-text">MBA in Marketing, Diploma in leather Technology </p>
+								<p class="card-text">MBA in Marketing, Diploma in leather
+									Technology</p>
+
+							</div>
+						</div>
+					</div>
+					
+					<!-- Fourth Column  -->
+
+					<div class="col-md-3 col-sm-3 col-lg-3 col-xl-3">
+						<div class="card mb-4 xs-3">
+							<img src="<spring:url value="/Edit/EditAboutUs/abhay.jpeg"/>"
+								class="card-img-top" alt="Vijay's Picture" />
+							<div class="card-body">
+								<h6 class="card-title">Abhay Pratap Singh</h6>
+								<p class="card-text">MBA in Marketing, Software Engineer</p>
 
 							</div>
 						</div>
