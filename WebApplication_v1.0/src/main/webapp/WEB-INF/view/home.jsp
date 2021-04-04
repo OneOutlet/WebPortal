@@ -15,8 +15,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="author" content="Harsh Vardhan Pandey">
 <meta name="description"
-	content="OneOutlet.com, We are providing Service for Electricain,Carpenter,Plumber,Painter,Event Management,IronWork in Gonda.
-                                  We Will Provide home service less than in hour in Gonda City. ">
+	content="OneOutlet.online, We are providing Service for Electricain,Carpenter,Plumber,Painter,Event Management,IronWork in Gonda.
+                                  We Will Provide home service less than in hour in Gonda City.OneOutlet , Electrician at Gonda , Painter at Gonda ,Tutoring Service at Gonda, IronWork at Gonda, Event Management at Gonda ">
 <meta
 	name="OneOutlet,home tuition,Gonda,Electrician,Carpenter,Plumber,Painter,Event Management,IronWork,Service in gonda,Gonda service "
 	content="keywords,here">

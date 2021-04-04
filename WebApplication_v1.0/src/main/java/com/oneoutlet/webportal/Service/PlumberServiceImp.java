@@ -72,9 +72,9 @@ public class PlumberServiceImp implements PlumberService {
 	        couponCodeDAO.insertCouponCodeData(requestNumber.toLowerCase(), 0);
 	        
 	        if (count == 1) {
-				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
+				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Plumber Service Confirmation",
 						customerEmailFormat);
-				email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com" },
+				email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com","ankur2v@gmail.com","mr.vjpandey123@gmail.com" },
 						"OneOutlet Service Notification", adminEmailFormat);
 			}
 			
