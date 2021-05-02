@@ -53,7 +53,7 @@ public class PlumberServiceImp implements PlumberService {
 			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 			
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Plumber", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress().concat(" "+dto.getLandmark()),codeApply);
 			
 			ServicePlumberBO bo= new ServicePlumberBO();
 

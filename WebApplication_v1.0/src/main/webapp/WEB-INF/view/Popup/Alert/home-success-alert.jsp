@@ -70,3 +70,11 @@
 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </div>
 </c:if>
+
+<!-- Care Diagnos Alert -->
+<c:if test="${param.actsuccess eq'reqCD'}">
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Thank You for Choosing us</strong> We Will Contact With You As Soon As Possible.
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+</c:if>

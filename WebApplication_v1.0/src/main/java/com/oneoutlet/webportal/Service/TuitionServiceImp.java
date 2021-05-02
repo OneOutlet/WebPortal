@@ -50,7 +50,7 @@ public class TuitionServiceImp implements TuitionService {
 			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 			
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Tuition", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress().concat(" "+dto.getLandmark()),codeApply);
 			
 			ServiceTuitionBO bo= new ServiceTuitionBO();
 			

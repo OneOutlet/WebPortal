@@ -28,7 +28,7 @@
 			<a href="https://www.facebook.com/oneoutlet.gonda"
 				class="btn btn-outline-white"> Follow Us on <i
 				class="fab fa-facebook ml-1"></i>
-			</a> <a href="https://www.instagram.com/oneoutlet.gonda/"
+			</a> <a href="https://www.instagram.com/oneoutletteam/"
 				class="btn btn-outline-white"> Follow Us on <i
 				class="fab fa-instagram ml-1"></i>
 			</a>

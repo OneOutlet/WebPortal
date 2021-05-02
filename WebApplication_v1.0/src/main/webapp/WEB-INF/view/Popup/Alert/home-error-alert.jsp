@@ -80,3 +80,13 @@
         }); 
     </script>
 </c:if>
+
+<!-- Care Diagnos Error Alert -->
+<c:if test="${act eq'reqCD'}">
+	
+	 <script>
+       $(document).ready(function(){
+            $('#modalCareDig').modal('show');
+        }); 
+    </script>
+</c:if>

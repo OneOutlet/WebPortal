@@ -51,7 +51,7 @@ public class IronWorkServiceImp implements IronWorkService {
 			customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 			
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "IronWork", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress().concat(" "+dto.getLandmark()),codeApply);
 			
 			ServiceIronWorkBO bo= new ServiceIronWorkBO();
 

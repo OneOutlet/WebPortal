@@ -51,7 +51,7 @@ public class ElectricianServiceImp implements ElectricianService {
 		customerEmailFormat=createEmail.generateCustomerEmail(dto.getCustomer_Name(),requestNumber);
 		
 		adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Electrician", requestNumber,
-				dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
+				dto.getMobile(), LocalDateTime.now(), dto.getAddress().concat(" "+dto.getLandmark()),codeApply);
 		
 			
 		ServiceElectricianBO bo= new ServiceElectricianBO();

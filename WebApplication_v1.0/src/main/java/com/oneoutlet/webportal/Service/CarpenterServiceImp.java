@@ -52,7 +52,7 @@ public class CarpenterServiceImp implements CarpenterService {
 			customerEmailFormat = createEmail.generateCustomerEmail(dto.getCustomer_Name(), requestNumber);
 
 			adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Carpenter", requestNumber,
-					dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
+					dto.getMobile(), LocalDateTime.now(), dto.getAddress().concat(" "+dto.getLandmark()),codeApply);
 
 			ServiceCarpenterBO bo = new ServiceCarpenterBO();
 
@@ -73,8 +73,8 @@ public class CarpenterServiceImp implements CarpenterService {
 
 			if (count == 1) {
 				email.sendMail(new String[] { dto.getEmail() }, "OneOutlet Carpenter Service Confirmation",
-						customerEmailFormat);
-				email.sendMail(new String[] { "harsh3492@gmail.com", "arvindy8687@gmail.com","ankur2v@gmail.com","mr.vjpandey123@gmail.com" },
+						customerEmailFormat);//, "arvindy8687@gmail.com","ankur2v@gmail.com","mr.vjpandey123@gmail.com"
+				email.sendMail(new String[] { "harsh3492@gmail.com" },
 						"OneOutlet Service Notification", adminEmailFormat);
 			}
 

@@ -50,7 +50,7 @@ public class EventServiceImp implements EventService {
 		customerEmailFormat = createEmail.generateCustomerEmail(dto.getCustomer_Name(), requestNumber);
 
 		adminEmailFormat = createEmail.generateAdminEmail(dto.getCustomer_Name(), "Event", requestNumber,
-				dto.getMobile(), LocalDateTime.now(), dto.getAddress(),codeApply);
+				dto.getMobile(), LocalDateTime.now(), dto.getAddress().concat(" "+dto.getLandmark()),codeApply);
 
 		ServiceEventBO bo = new ServiceEventBO();
 

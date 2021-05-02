@@ -6,7 +6,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);color:white">
     © 2020 Copyright:
-    <a style="color:white" href="./">OneOutlet.com</a>
+    <a style="color:white" href="./">OneOutlet.online</a>
   </div>
   <!-- Copyright -->
 </footer>

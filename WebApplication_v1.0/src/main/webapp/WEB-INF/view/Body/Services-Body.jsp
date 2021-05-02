@@ -79,14 +79,12 @@
 			<div class="card-body">
 
 				<!--Title-->
-				<h4 class="card-title">Carpenter</h4>
+				<h4 class="card-title">Care Diagnostic</h4>
 				<!--Text-->
 				<p class="card-text"></p>
 				<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-				<button type="button"
-					class="btn btn-light-blue btn-md blue-gradient"
-					data-target="#modalCarpenterForm" data-toggle="modal">BOOK
-					NOW</button>
+				<a type="button" href="./carediagnos"
+					class="btn btn-light-blue btn-md blue-gradient">BOOK NOW</a>
 
 			</div>
 
@@ -237,7 +235,35 @@
 			<!-- Card -->
 		<div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
 
-			<!-- Empty Content -->
+			<!-- Carpenter Card -->
+		<div class="card mb-4 xs-4">
+
+			<!--Card image-->
+			<div class="view overlay">
+				<img class="card-img-top"
+					src="<spring:url value="/Edit/EditHome/Service-Body/carpenter.jpg"/>"
+					alt="Card image cap"> <a href="#!">
+					<div class="mask rgba-white-slight"></div>
+				</a>
+			</div>
+
+			<!--Card content-->
+			<div class="card-body">
+
+				<!--Title-->
+				<h4 class="card-title">Carpenter</h4>
+				<!--Text-->
+				<p class="card-text"></p>
+				<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+				<button type="button"
+					class="btn btn-light-blue btn-md blue-gradient"
+					data-target="#modalCarpenterForm" data-toggle="modal">BOOK
+					NOW</button>
+
+			</div>
+
+		</div>
+		<!-- Card -->
 
 		</div>
 		<!-- Card -->

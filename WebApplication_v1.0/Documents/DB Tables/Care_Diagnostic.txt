@@ -1,0 +1,13 @@
+                                                                                                                                     CARE_DIG_REQUEST
+QUERY:- CREATE TABLE  CARE_DIG_REQUEST (REQ_NO VARCHAR(100) PRIMARY KEY, NAME VARCHAR(100) NOT NULL, MOBILE_NO VARCHAR(11) NOT NULL, EMAIL_ID VARCHAR(100) NOT NULL,TEST VARCHAR(50) NOT NULL,ADDRESS VARCHAR(700) NOT NULL);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                     CARE_DIG_TEST
+QUERY:- CREATE TABLE  CARE_DIG_TEST (TEST_CODE VARCHAR(25) PRIMARY KEY,TEST_NAME VARCHAR(100) NOT NULL, PRICE INT NOT NULL);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                     CARE_DIG_BALANCE
+QUERY:- CREATE TABLE  CARE_DIG_BALANCE (CD_TEST_BALANCE INT NOT NULL,ONEOUTLET_BAL INT NOT NULL,RECIVED_AMT INT NOT NULL,LAST_UPDATE DATE NOT NULL,COMMENT VARCHAR(500) NOT NULL);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+                                                                                                                                 

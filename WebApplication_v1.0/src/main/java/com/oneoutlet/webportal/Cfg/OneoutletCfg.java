@@ -25,7 +25,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = { "com.oneoutlet.webportal.Service", "com.oneoutlet.webportal.DAO",
-		"com.oneoutlet.webportal.Controller", "com.oneoutlet.common" })
+		"com.oneoutlet.webportal.Controller", "com.oneoutlet.common","com.oneoutlet.carediagnos.dao" })
 @PropertySource({ "classpath:/com/oneoutlet/common/dbConnection.properties",
 		"classpath:/com/oneoutlet/common/validation.properties" })
 public class OneoutletCfg implements WebMvcConfigurer {

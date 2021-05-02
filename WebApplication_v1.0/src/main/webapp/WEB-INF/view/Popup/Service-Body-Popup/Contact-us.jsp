@@ -62,7 +62,7 @@
 				</div>
 				<div class="modal-footer d-flex justify-content-center">
 				 <h5 class="modal-title w-100 font-weight-bold">
-				  Or Call us on <i class="fas fa-mobile-alt"></i> +918808089692,+919557518944</h5>
+				  Or Call us on <i class="fas fa-mobile-alt"></i> +918808089692,+919628141545</h5>
 				</div>
 			</form:form>
 		</div>
