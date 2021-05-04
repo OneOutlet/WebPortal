@@ -5,11 +5,10 @@
 
 <div class="container">
 	<div class=" my-4 jumbotron">
-		<h2 class="h1-responsive font-weight-bold text-center">CARE
-			DIAGNOSTIC</h2>
+		<h2 class="h1-responsive font-weight-bold text-center">Teacher</h2>
 
-		<form:form method="post" action="cDRegister" modelAttribute="careDig"
-			name="cdRegisterFrm" onsubmit="return cdRegisterValid()"
+		<form:form method="post" action="teacherRegister" modelAttribute="teacher"
+			name="teacherRegisterFrm" onsubmit="return teacherRegisterValid()"
 			class="needs-validation">
 			<div class="modal-body mx-3">
 				<div class="md-form mb-3">
@@ -19,7 +18,7 @@
 					<label data-error="wrong" data-success="right"
 						for="validationServerUsername55">Your Name</label>
 					<p data-error="wrong" data-success="right" class="invalid-feedback"
-						id="cdName"></p>
+						id="teacherName"></p>
 					<form:errors class="invalid-feedback" path="name" />
 
 
@@ -31,7 +30,7 @@
 					<label data-error="wrong" data-success="right"
 						for="orangeForm-name">Mobile Number</label>
 					<p data-error="wrong" data-success="right" class="invalid-feedback"
-						id="cdMobile"></p>
+						id="teacherMobile"></p>
 					<form:errors class="invalid-feedback" path="mobile" />
 				</div>
 				<div class="md-form mb-3">
@@ -41,33 +40,34 @@
 					<label data-error="wrong" data-success="right"
 						for="orangeForm-email">Your Email</label>
 					<p data-error="wrong" data-success="right" class="invalid-feedback"
-						id="cdEmail"></p>
+						id="teacherEmail"></p>
 					<form:errors class="invalid-feedback" path="email" />
 				</div>
 
-				<!-- <div class="md-form mb-3">
+				<div class="md-form mb-3">
 
-					<i class="fas fa-microscope  prefix grey-text"></i>
-					<form:input type="text" path="test" id="orangeForm-name"
+					<i class="fas fa-book-open prefix grey-text"></i>
+					<form:input type="text" path="qualification" id="orangeForm-name"
 						class="md-textarea form-control is-invalid  validate" />
 					<label data-error="wrong" data-success="right"
-						for="orangeForm-name">Test Name</label>
+						for="orangeForm-name">Qualification</label>
 					<p data-error="wrong" data-success="right" class="invalid-feedback"
-						id="cdtest"></p>
-					<form:errors class="invalid-feedback" path="test" />
-				</div> -->
+						id="teacherQualification"></p>
+					<form:errors class="invalid-feedback" path="qualification" />
+				</div>
 				
 				<div class="md-form mb-3">
-					<i class="fas fa-microscope  prefix grey-text"></i>
-				    <form:select path="test" style="border-top:0px;border-left:0px;border-right:0px;" id="orangeForm-name"
-						class="md-textarea form-control is-invalid  validate">
-					    <form:option value="" label="&nbsp Please Select Your Test"/>    
-					  <form:options items="${cdTest}" />
-					</form:select>
-					
-					<form:errors class="invalid-feedback" path="test" />
+					<i class="fas fa-business-time  prefix grey-text"></i>
+					<form:input type="number" path="experience"
+					         placeholder="In Number Only(e.g. 2)" id="orangeForm-name"
+						class="md-textarea form-control is-invalid  validate" />
+					<label data-error="wrong" data-success="right"
+						for="orangeForm-name">Experience</label>
+					<p data-error="wrong" data-success="right" class="invalid-feedback"
+						id="teacherExp"></p>
+					<form:errors class="invalid-feedback" path="experience" />
 				</div>
-
+			
 				<div class="md-form mb-3">
 
 					<i class="fas fa-map-marked  prefix grey-text"></i>
@@ -76,7 +76,7 @@
 					<label data-error="wrong" data-success="right"
 						for="orangeForm-name">Your Address</label>
 					<p data-error="wrong" data-success="right" class="invalid-feedback"
-						id="cdAddress"></p>
+						id="teacherAddress"></p>
 					<form:errors class="invalid-feedback" path="Address" />
 				</div>
 
@@ -89,7 +89,7 @@
 				</div>
 
 				<div class="d-flex justify-content-center">
-					<button type="submit" class="btn btn-deep-orange">BOOK NOW</button>
+					<button type="submit" class="btn btn-deep-orange">Register</button>
 				</div>
 			</div>
 		</form:form>

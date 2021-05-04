@@ -28,7 +28,7 @@ public abstract class AllServiceTable {
 
 			simplejdbcInser.withTableName("Service_All");
 
-			Map<String, Object> map = new HashMap();
+			Map<String, Object> map = new HashMap<String, Object>();
 			
 			map.put("Request_Number", reqNo);
 			map.put("Service_Name", serviceName);

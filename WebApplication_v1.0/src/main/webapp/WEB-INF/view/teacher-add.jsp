@@ -1,6 +1,6 @@
 <%@ page isELIgnored="false"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <noscript>
 	<div class="alert alert-danger" role="alert">
 		Please Enable javaScript in your Browser.
@@ -19,7 +19,7 @@
 <meta
 	name="OneOutlet,home tuition,Gonda,Electrician,Carpenter,Plumber,Painter,Event Management,IronWork,Service in gonda,Gonda service "
 	content="keywords,here">
-<link rel="shortcut icon" href="favicon.ico"
+<link rel="shortcut icon" href="/Edit/EditCareDiagnos/favicon.ico"
 	type="image/vnd.microsoft.icon">
 <title>OneOutlet.online Gonda,Book Electrician,Carpenter and Home Tuition in
 	Gonda</title>
@@ -45,14 +45,9 @@
 <link href='<spring:url value="/Edit/EditHome/custom-home.css"/>'
 	rel="stylesheet" />
 
-
-
 </head>
+
 <body>
-
-
-	
-
 	<!-- Service Success Alert -->
 
 	<jsp:include page="Popup/Alert/home-success-alert.jsp"></jsp:include>
@@ -64,36 +59,16 @@
 	<!-- Body -->
 	<div class="container">
 
-		<jsp:include page="Body/Services-Body.jsp"></jsp:include>
+	    <jsp:include page="Popup/PartnerRequest/teacher-register-form.jsp"></jsp:include>
 
 	</div>
 
 	<!-- Popups -->
-
-	<jsp:include page="Popup/Service-Body-Popup/Electrician.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/Carpenter.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/EvenPlaning.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/Tuition.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/Ironwork.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/Painter.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/Plumber.jsp"></jsp:include>
-
-
-	<jsp:include page="Popup/Service-Body-Popup/Contact-us.jsp"></jsp:include>
-
-
+ 
+	
+          
+	
+       
 	<!-- Footer -->
 	<jsp:include page="Footer/footer.jsp"></jsp:include>
 
@@ -101,21 +76,7 @@
 	<!--Custom javaScript----->
 
 	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-carpenter.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-contact.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-electrician.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-event.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-ironwork.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-painter.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-plumber.js"/>'></script>
-	<script type="text/javascript"
-		src='<spring:url value="/Edit/EditHome/js/custom-home-tuition.js"/>'></script>
+		src='<spring:url value="/Edit/EditPartnerRequest/js/custom-teacher-register.js"/>'></script>
 
 
 	<!-- JQuery -->

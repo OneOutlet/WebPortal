@@ -1,0 +1,18 @@
+                                                     REGISTER_TEACHER
+QUERY:- CREATE TABLE REGISTER_TEACHER(ID VARCHAR(100),NAME VARCHAR(100),MOBILE_NUMBER INT,QUALIFICATION VARCHAR(100),ADDRESS VARCHAR(100)); 	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     REGISTER_PLUMBER
+QUERY:- CREATE TABLE REGISTER_PLUMBER(ID VARCHAR(100),NAME VARCHAR(100),MOBILE_NUMBER INT,EXPERIENCE INT,ADDRESS VARCHAR(100)); 			
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     REGISTER_PAINTER
+QUERY:- CREATE TABLE REGISTER_PAINTER(ID VARCHAR(100),NAME VARCHAR(100),MOBILE_NUMBER INT,EXPERIENCE INT,ADDRESS VARCHAR(100)); 		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     REGISTER_ELECTRICIAN
+QUERY:- CREATE TABLE REGISTER_ELECTRICIAN(ID VARCHAR(100),NAME VARCHAR(100),MOBILE_NUMBER INT,EXPERIENCE INT,ADDRESS VARCHAR(100)); 		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     REGISTER_IRONWORK
+QUERY:- CREATE TABLE REGISTER_IRONWORK(ID VARCHAR(100),NAME VARCHAR(100),MOBILE_NUMBER INT,EXPERIENCE INT,ADDRESS VARCHAR(100)); 			
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                     REGISTER_CARPENTER
+QUERY:- CREATE TABLE REGISTER_CARPENTER(ID VARCHAR(100),NAME VARCHAR(100),MOBILE_NUMBER INT,EXPERIENCE INT,ADDRESS VARCHAR(100)); 											 

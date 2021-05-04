@@ -98,5 +98,27 @@ public class CreateEmailImp implements CreateEmail {
 		return email;
 	}
 
+	@Override
+	public String generateTeacherRequest(String requesterName, String mobileNum, String qualifiacation, Integer Exp,
+			String address) {
+		
+		String email = null;
+		email = "<link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\" rel=\"stylesheet\" />"
+				+ "<link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap\" rel=\"stylesheet\" />"
+				+ "<link href=\"https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css\" rel=\"stylesheet\" />"
+				+ "<div class=\"container\">"
+				+ "<div class=\"row\"><h3 class=\"text-justify\"> Hi OneOutlet</h3>"
+				+ "<p class=\"text-jutify\" >We Have New Request. Please Check the blow detail</p></div>"
+				+ "<div class=\"row\"><table class=\"table\">" + "<tbody><tr><th scope=\"row\">Requester Name</th><td>"
+				+ requesterName + "</td></tr>" + "<tr><th scope=\"row\">Mobile </th><td>" + mobileNum
+				+ "</td></tr>" + "<tr><th scope=\"row\">Experiance </th><td>" + Exp + "</td></tr>"
+				+ "<tr><th scope=\"row\">Qualifiaction</th><td>" + qualifiacation + "</td></tr>"
+				+  "<tr><th scope=\"row\">Address</th><td>"
+				+ address + "</td></tr>" + "</tbody></table></div></div>" 
+				+ " <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js\" ></script>";
+
+		return email;
+	}
+
 
 }

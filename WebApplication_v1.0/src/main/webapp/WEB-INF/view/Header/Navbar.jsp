@@ -22,6 +22,8 @@
 		
 
 		<ul class="navbar-nav ml-auto nav-flex-icons">
+		
+		<li class="nav-item"><a class="nav-link" href="./teacher-req">Register Teacher</a></li>
 			
 			<li class="nav-item"><a class="nav-link"
 				data-target="#modalContactUsForm" data-toggle="modal">Contact

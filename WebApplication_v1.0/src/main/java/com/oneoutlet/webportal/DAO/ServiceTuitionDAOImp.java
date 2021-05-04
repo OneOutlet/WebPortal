@@ -5,8 +5,6 @@ import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
-
-import com.oneoutlet.webportal.BO.ServiceEventBO;
 import com.oneoutlet.webportal.BO.ServiceTuitionBO;
 
 @Repository

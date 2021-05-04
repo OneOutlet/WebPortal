@@ -27,9 +27,6 @@ public class CareDigReqServiceImp implements CareDigReqService {
 	public int insertDataOfCareDig(CareDigReqDTO dto) {
 
 		try {
-			System.out.println("CareDigReqServiceImp.insertDataOfCareDig()");
-			
-			System.out.println("DTO "+dto);
 			int count = 0; 
 
 			String customerEmailFormat = null;
