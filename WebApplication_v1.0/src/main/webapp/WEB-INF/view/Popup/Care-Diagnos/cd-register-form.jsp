@@ -5,8 +5,8 @@
 
 <div class="container">
 	<div class=" my-4 jumbotron">
-		<h2 class="h1-responsive font-weight-bold text-center">CARE
-			DIAGNOSTIC</h2>
+		<h3 class="h1-responsive font-weight-bold text-center">CARE
+			DIAGNOSTIC</h3>
 
 		<form:form method="post" action="cDRegister" modelAttribute="careDig"
 			name="cdRegisterFrm" onsubmit="return cdRegisterValid()"
@@ -58,13 +58,14 @@
 				</div> -->
 				
 				<div class="md-form mb-3">
-					<i class="fas fa-microscope  prefix grey-text"></i>
+					
 				    <form:select path="test" style="border-top:0px;border-left:0px;border-right:0px;" id="orangeForm-name"
 						class="md-textarea form-control is-invalid  validate">
-					    <form:option value="" label="&nbsp Please Select Your Test"/>    
+					    <form:option  value="" disabled="" label=" Please Select Your Test"/>    
 					  <form:options items="${cdTest}" />
 					</form:select>
-					
+					<p data-error="wrong" data-success="right" class="invalid-feedback"
+						id="cdtest"></p>
 					<form:errors class="invalid-feedback" path="test" />
 				</div>
 
@@ -95,3 +96,4 @@
 		</form:form>
 	</div>
 </div>
+
